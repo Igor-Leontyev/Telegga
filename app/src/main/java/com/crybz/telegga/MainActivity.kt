@@ -7,6 +7,7 @@ import android.widget.Toast
 import android.widget.Toolbar
 import com.crybz.telegga.databinding.ActivityMainBinding
 import com.crybz.telegga.ui.ChatFragment
+import com.crybz.telegga.ui.SettingsFragment
 import com.mikepenz.materialdrawer.AccountHeader
 import com.mikepenz.materialdrawer.AccountHeaderBuilder
 import com.mikepenz.materialdrawer.Drawer
@@ -38,7 +39,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun initFunc() {
         setSupportActionBar(mToolBar)
-        supportFragmentManager.beginTransaction().replace(R.id.dataContainer,ChatFragment()).commit()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.dataContainer,ChatFragment()).commit()
         createheader()
         createDrawer()
     }
@@ -48,48 +50,48 @@ class MainActivity : AppCompatActivity() {
             .withToolbar(mToolBar).withActionBarDrawerToggle(true)
             .withSelectedItem(-1)
             .withAccountHeader(mHeder).addDrawerItems(
-                PrimaryDrawerItem().withIdentifier(100)
+                PrimaryDrawerItem().withIdentifier(101)
                     .withIconTintingEnabled(true)
                     .withName("Создать группу")
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_create_groups),
-                PrimaryDrawerItem().withIdentifier(101)
+                PrimaryDrawerItem().withIdentifier(102)
                     .withIconTintingEnabled(true)
                     .withName("Создать секретный чат")
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_secret_chat),
-                PrimaryDrawerItem().withIdentifier(102)
+                PrimaryDrawerItem().withIdentifier(103)
                     .withIconTintingEnabled(true)
                     .withName("Создать канал")
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_create_channel),
-                PrimaryDrawerItem().withIdentifier(103)
+                PrimaryDrawerItem().withIdentifier(104)
                     .withIconTintingEnabled(true)
                     .withName("Контакты")
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_contacts),
-                PrimaryDrawerItem().withIdentifier(104)
+                PrimaryDrawerItem().withIdentifier(105)
                     .withIconTintingEnabled(true)
                     .withName("Звонки")
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_phone),
-                PrimaryDrawerItem().withIdentifier(105)
+                PrimaryDrawerItem().withIdentifier(106)
                     .withIconTintingEnabled(true)
                     .withName("Избранное")
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_favorites),
-                PrimaryDrawerItem().withIdentifier(106)
+                PrimaryDrawerItem().withIdentifier(107)
                     .withIconTintingEnabled(true)
                     .withName("Настройки")
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_settings),
                 DividerDrawerItem(),
-                PrimaryDrawerItem().withIdentifier(107)
+                PrimaryDrawerItem().withIdentifier(108)
                     .withIconTintingEnabled(true)
                     .withName("Пригласить друзей")
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_invate),
-                PrimaryDrawerItem().withIdentifier(108)
+                PrimaryDrawerItem().withIdentifier(109)
                     .withIconTintingEnabled(true)
                     .withName("Вопросы")
                     .withSelectable(false)
@@ -98,7 +100,12 @@ class MainActivity : AppCompatActivity() {
 
             ).withOnDrawerItemClickListener(object :Drawer.OnDrawerItemClickListener{
                 override fun onItemClick(view: View?, position: Int, drawerItem: IDrawerItem<*>): Boolean {
-                    Toast.makeText(applicationContext,position.toString(),Toast.LENGTH_SHORT).show()
+                 when(position){
+                     7 ->   supportFragmentManager.beginTransaction()
+                         .addToBackStack(null)
+                         .replace(R.id.dataContainer,SettingsFragment()).commit()
+
+                 }
                    return  false
                 }
             }).build()
