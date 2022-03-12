@@ -93,6 +93,7 @@ class MainActivity : AppCompatActivity() {
                     .withSelectable(false)
                     .withIcon(R.drawable.ic_menu_help)
 
+
             ).withOnDrawerItemClickListener(object :Drawer.OnDrawerItemClickListener{
                 override fun onItemClick(view: View?, position: Int, drawerItem: IDrawerItem<*>): Boolean {
                     Toast.makeText(applicationContext,position.toString(),Toast.LENGTH_SHORT).show()
