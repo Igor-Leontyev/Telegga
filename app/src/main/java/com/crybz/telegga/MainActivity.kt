@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Toast
 import android.widget.Toolbar
 import com.crybz.telegga.databinding.ActivityMainBinding
+import com.crybz.telegga.ui.ChatFragment
 import com.mikepenz.materialdrawer.AccountHeader
 import com.mikepenz.materialdrawer.AccountHeaderBuilder
 import com.mikepenz.materialdrawer.Drawer
@@ -37,6 +38,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun initFunc() {
         setSupportActionBar(mToolBar)
+        supportFragmentManager.beginTransaction().replace(R.id.dataContainer,ChatFragment()).commit()
         createheader()
         createDrawer()
     }
