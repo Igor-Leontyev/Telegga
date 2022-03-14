@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!--Settings fragment-->
+    <dimen name="settings_user_foto_width">60dp</dimen>
+    <dimen name="settings_user_foto_hight">60dp</dimen>
+    <dimen name="settings_user_foto_border">2dp</dimen>
+
+    <dimen name="settings_change_user_foto_width">45dp</dimen>
+    <dimen name="settings_change_user_foto_hight">60dp</dimen>
+    <dimen name="settings_change_user_foto_border">2dp</dimen>
+    <!--Settings fragment-->
+
+    <dimen name="horizontal_margin">16dp</dimen>
+    <dimen name="normal_text">18sp</dimen>
+    <dimen name="small_text">14sp</dimen>
+    <dimen name="vertical_margin">16dp</dimen>
+    <dimen name="settings_ripple_effect_radius">4dp</dimen>
+
+
+</resources>

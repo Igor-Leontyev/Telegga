@@ -2,4 +2,13 @@
     <string name="app_name">Telegga</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_name">Sergey Petrov</string>
+    <string name="default_status">в сети</string>
+    <string name="text_account">Аккаунт</string>
+    <string name="default_phone">+7(977)4531212</string>
+    <string name="click_to_number_for_change">Нажмите для изменения номера телефона</string>
+    <string name="default_login">cry@yandex.ru</string>
+    <string name="click_to_login_for_change">Нажмите для изменения логина</string>
+    <string name="default_bio">О себе</string>
+    <string name="write_little_about_yourself">Напишите немног о себе</string>
 </resources>
